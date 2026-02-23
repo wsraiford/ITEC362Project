@@ -1,0 +1,22 @@
+h1 {
+    font-family: Courier;
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: lightblue;
+}
+
+div  img{
+    width: 330px;
+    height: 520px;
+}
+
+textarea {
+    background-color: white;
+    border: 2px solid black;
+    padding-bottom: 20px;
+    font-family: monospace;
+    color: black;
+}
