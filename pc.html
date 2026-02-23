@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameRatings - PC</title>
+
+  <!-- Link to your stylesheet - ensure this file exists in the same folder -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-text">GameRatings.com</div>
+
+      <nav class="platform-nav" aria-label="Platform navigation">
+        <ul>
+          <li><a href="xbox.html">XBOX</a></li>
+          <li><a href="#">Nintendo</a></li>
+          <li><a href="#">PlayStation</a></li>
+          <li class="active"><a href="pc.html">PC</a></li>
+          <li><a href="#">VR</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+
+      <div class="search" role="search">
+        <input type="search" placeholder="Search">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main">
+    <div class="container">
+
+      <!-- Trending PC Games -->
+      <section aria-labelledby="trending-heading">
+        <h2 id="trending-heading" class="section-title">Trending PC Games</h2>
+
+        <div class="grid grid-3" style="margin-top:12px;">
+          <article class="game-card">
+            <img src="images/civ2.jpg" alt="Civilization II cover" class="game-cover">
+            <div class="meta">
+              <h4>Civilization II</h4>
+              <p class="small text-muted">Overall Rating: ★★★★★ — Natalie — 5/5</p>
+              <p class="small">“It reminds me of the original classic but with deeper strategy.”</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <img src="images/diablo.jpg" alt="Diablo cover" class="game-cover">
+            <div class="meta">
+              <h4>Diablo</h4>
+              <p class="small text-muted">Overall Rating: ★★★☆☆ — Grant — 3/5</p>
+              <p class="small">“Combat feels great, but it can get repetitive after a while.”</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <img src="images/cod.jpg" alt="Call of Duty Warzone cover" class="game-cover">
+            <div class="meta">
+              <h4>Call of Duty: Warzone</h4>
+              <p class="small text-muted">Overall Rating: ★★★★☆ — Raymond — 4/5</p>
+              <p class="small">“Fast-paced matches and intense firefights. Best with friends.”</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Popular PC Games -->
+      <section aria-labelledby="popular-heading">
+        <h2 id="popular-heading" class="section-title">Popular PC Games</h2>
+
+        <div class="grid grid-3" style="margin-top:12px;">
+          <article class="game-card">
+            <img src="images/rd2.jpg" alt="Red Dead Redemption 2 cover" class="game-cover">
+            <div class="meta">
+              <h4>Red Dead Redemption II</h4>
+              <p class="small text-muted">Overall Rating: ★★★★★ — Ashley — 5/5</p>
+              <p class="small">“One of the best story-driven games ever made. Stunning visuals.”</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <img src="images/skyrim.jpg" alt="Skyrim cover" class="game-cover">
+            <div class="meta">
+              <h4>Skyrim</h4>
+              <p class="small text-muted">Overall Rating: ★★★☆☆ — John — 3/5</p>
+              <p class="small">“Massive world and great quests, but combat feels dated.</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <img src="images/fortnite.jpg" alt="Fortnite cover" class="game-cover">
+            <div class="meta">
+              <h4>Fortnite</h4>
+              <p class="small text-muted">Overall Rating: ★★★★☆ — Matthew — 4/5</p>
+              <p class="small">“Fun seasonal updates and exciting competitive matches.”</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PC Forum -->
+      <section class="pc-forum" aria-labelledby="forum-heading">
+        <h2 id="forum-heading" class="section-title">PC Forum</h2>
+
+        <form class="forum-form" action="#" method="post" style="margin-top:12px;">
+          <textarea name="post" placeholder="Type Response Here"></textarea>
+          <div class="forum-controls">
+            <button type="submit" class="btn-post">Post</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer" style="margin-top:22px;">
+        © 2026 GameRatings.com — ITEC 362 Web Systems Project
+      </footer>
+
+    </div> <!-- /.container -->
+  </main>
+
+</body>
+</html>
+
