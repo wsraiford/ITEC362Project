@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameRatings - XBOX</title>
+
+  <!-- Make sure this matches your CSS filename -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- INTERNAL CSS (for assignment requirement) -->
+  <style>
+    .xbox-badge {
+      display:inline-block;
+      padding:6px 8px;
+      border-radius:4px;
+      background:#0fbf6b;
+      color:white;
+      font-weight:700;
+      font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-text">GameRatings.com</div>
+
+    <nav class="platform-nav">
+      <ul>
+        <li class="active"><a href="xbox.html">XBOX</a></li>
+        <li><a href="pc.html">PC</a></li>
+        <li><a href="#">PlayStation</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
+    <div class="search">
+      <input type="search" placeholder="Search">
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+
+    <section>
+      <h2 class="section-title">
+        Trending XBOX Games
+        <span class="xbox-badge">XBOX</span>
+      </h2>
+
+      <div class="grid grid-3">
+
+        <article class="game-card">
+          <img src="images/forza.jpg" alt="Forza Horizon 5" class="game-cover">
+          <div class="meta">
+            <h4>Forza Horizon 5</h4>
+            <p class="small text-muted">Overall Rating: ★★★★★ — Taylor — 5/5</p>
+            <p class="small">Beautiful open-world racing with tons of cars.</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="images/halo.jpg" alt="Halo Infinite" class="game-cover">
+          <div class="meta">
+            <h4>Halo Infinite</h4>
+            <p class="small text-muted">Overall Rating: ★★★★☆ — Raymond — 4/5</p>
+            <p class="small">Strong multiplayer and a solid campaign.</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="images/gta.jpg" alt="GTA V" class="game-cover">
+          <div class="meta">
+            <h4>GTA V</h4>
+            <p class="small text-muted">Overall Rating: ★★★★★ — Marcus — 5/5</p>
+            <p class="small">Classic open-world experience that never gets old.</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="images/fortnite.jpg" alt="Fortnite" class="game-cover">
+          <div class="meta">
+            <h4>Fortnite</h4>
+            <p class="small text-muted">Overall Rating: ★★★★☆ — Emily — 4/5</p>
+            <p class="small">Fun seasonal updates and competitive matches.</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="images/overcooked.jpg" alt="Overcooked" class="game-cover">
+          <div class="meta">
+            <h4>Overcooked</h4>
+            <p class="small text-muted">Overall Rating: ★★★☆☆ — Taylor — 3/5</p>
+            <p class="small">Chaotic couch co-op fun.</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="images/minecraft.jpg" alt="Minecraft" class="game-cover">
+          <div class="meta">
+            <h4>Minecraft</h4>
+            <p class="small text-muted">Overall Rating: ★★★★★ — Connor — 5/5</p>
+            <p class="small">Creative freedom at its best.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Forum -->
+    <section class="pc-forum">
+      <h2 class="section-title">XBOX Forum</h2>
+
+      <form class="forum-form">
+        <textarea placeholder="Type Response Here"></textarea>
+        <div class="forum-controls">
+          <button type="submit" class="btn-post">Post</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      © 2026 GameRatings.com — ITEC 362 Web Systems Project
+    </footer>
+
+  </div>
+</main>
+
+</body>
+</html>
