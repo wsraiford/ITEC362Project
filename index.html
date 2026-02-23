@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameRatings - Home</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .card, .game-card {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover, .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+    }
+
+    .platform-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .announcement {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px;
+      border-radius:8px;
+      background:#f9f9f9;
+      border:1px solid #eee;
+    }
+
+    .announcement .accent {
+      width:6px;
+      height:40px;
+      border-radius:4px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-text">GameRatings.com</div>
+
+    <nav class="platform-nav">
+      <ul>
+        <li><a href="xbox.html">XBOX</a></li>
+        <li><a href="#">Nintendo</a></li>
+        <li><a href="#">PlayStation</a></li>
+        <li><a href="pc.html">PC</a></li>
+        <li><a href="#">VR</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
+    <div class="search">
+      <input type="search" placeholder="Search">
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="page-title">Welcome to GameRatings</h1>
+      <p>Discover reviews, ratings and community posts from gamers across platforms.</p>
+
+      <div style="margin-top:15px;">
+        <a href="pc.html"
+           style="display:inline-block;padding:14px 22px;border-radius:10px;background:linear-gradient(90deg,#06c6d4,#3ab7f2);color:#fff;font-weight:800;">
+          Browse PC Games
+        </a>
+      </div>
+    </section>
+
+    <!-- Platforms -->
+    <section>
+      <h2 class="section-title">Explore Platforms</h2>
+
+      <div class="grid grid-3" style="margin-top:15px;">
+
+        <article class="card platform-card">
+         <img src="images/pc2.jpg" alt="PC">
+          <div class="meta">
+            <h4>PC</h4>
+            <p class="small">Detailed reviews and top PC games.</p>
+            <a href="pc.html">View PC →</a>
+          </div>
+        </article>
+
+        <article class="card platform-card">
+          <img src="images/xbox.jpg" alt="XBOX">
+          <div class="meta">
+            <h4>XBOX</h4>
+            <p class="small">Trending Xbox titles and forums.</p>
+            <a href="xbox.html">View XBOX →</a>
+          </div>
+        </article>
+
+        <article class="card platform-card">
+          <img src="images/ps.jpg" alt="PlayStation">
+          <div class="meta">
+            <h4>PlayStation</h4>
+            <p class="small">Top PlayStation exclusives and hits.</p>
+            <a href="#">View PlayStation →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Latest Announcements (NO PHOTOS) -->
+    <section style="margin-top:25px;">
+      <h2 class="section-title">Latest Announcements</h2>
+
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:15px;">
+
+        <div class="announcement">
+          <div class="accent" style="background:#06c6d4;"></div>
+          <div>
+            <strong>New Rating System Launched</strong>
+            <div class="small">Feb 2026</div>
+          </div>
+        </div>
+
+        <div class="announcement">
+          <div class="accent" style="background:#f7c600;"></div>
+          <div>
+            <strong>Forum Moderation Guidelines Updated</strong>
+            <div class="small">Feb 2026</div>
+          </div>
+        </div>
+
+        <div class="announcement">
+          <div class="accent" style="background:#6b9cff;"></div>
+          <div>
+            <strong>Community Game Night This Friday</strong>
+            <div class="small">Jan 2026</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Forum -->
+    <section class="pc-forum" style="margin-top:30px;">
+      <h2 class="section-title">Community Forum</h2>
+
+      <form class="forum-form">
+        <textarea placeholder="Start a discussion..."></textarea>
+        <div class="forum-controls">
+          <button type="submit" class="btn-post">Post</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="site-footer" style="margin-top:25px;">
+      © 2026 GameRatings.com — ITEC 362 Web Systems Project
+    </footer>
+
+  </div>
+</main>
+
+</body>
+</html>
