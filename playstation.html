@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameRatings - PlayStation</title>
+
+  <!-- Google font used in screenshot-like style (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="site-play">
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <!-- replace with your logo image -->
+        <img src="images/logo-placeholder.png" alt="GAMERATINGS.COM logo" class="logo-img">
+      </div>
+
+      <nav class="platform-nav">
+        <ul>
+          <li><a href="xbox.html">XBOX</a></li>
+          <li><a href="nintendo.html">Nintendo</a></li>
+          <li><a href="playstation.html" class="active">PlayStation</a></li>
+          <li><a href="pc.html">PC</a></li>
+          <li><a href="vr.html">VR Home</a></li>
+        </ul>
+      </nav>
+
+      <div class="search">
+        <form id="site-search" onsubmit="return doSearch()">
+          <button type="submit" class="search-btn" aria-label="search">🔍</button>
+          <input id="searchInput" type="search" placeholder="Search" />
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+
+      <h1 class="page-title">Featured PlayStation Games</h1>
+
+      <!-- GRID OF GAME CARDS -->
+      <section class="grid grid-3">
+        <!-- Game card (repeat for each game) -->
+        <article class="game-card card">
+          <img src="images/split-fiction.jpg" alt="Split Fiction" class="cover">
+          <div class="game-meta">
+            <h3>Split Fiction (PS5)</h3>
+            <div class="rating">Overall Rating:
+              <span class="stars">★★★★★</span>
+            </div>
+            <p class="small">Elsa F. - 5/5<br>After I started playing I was instantly hooked! You have to try it.</p>
+          </div>
+        </article>
+
+        <article class="game-card card">
+          <img src="images/last-of-us.jpg" alt="The Last of Us" class="cover">
+          <div class="game-meta">
+            <h3>The Last of Us (PS4)</h3>
+            <div class="rating">Overall Rating:
+              <span class="stars">★★★★☆</span>
+            </div>
+            <p class="small">Johnny C. - 4/5<br>Great story, just gets boring after awhile.</p>
+          </div>
+        </article>
+
+        <article class="game-card card">
+          <img src="images/evil-west.jpg" alt="Evil West" class="cover">
+          <div class="game-meta">
+            <h3>Evil West (PS5)</h3>
+            <div class="rating">Overall Rating:
+              <span class="stars">★★★☆☆</span>
+            </div>
+            <p class="small">Jae B. - 3/5<br>Kind of pay to win, but otherwise it was good.</p>
+          </div>
+        </article>
+
+        <article class="game-card card">
+          <img src="images/capcom-collection.jpg" alt="Capcom Fighting" class="cover">
+          <div class="game-meta">
+            <h3>Capcom Fighting (PS4)</h3>
+            <div class="rating">Overall Rating:
+              <span class="stars">★★★★★</span>
+            </div>
+            <p class="small">Samuel T. - 5/5<br>I love this game!</p>
+          </div>
+        </article>
+
+        <article class="game-card card">
+          <img src="images/spiderman2.jpg" alt="Spider-man 2" class="cover">
+          <div class="game-meta">
+            <h3>Marvel Spider-Man 2 (PS5)</h3>
+            <div class="rating">Overall Rating:
+              <span class="stars">★★★★☆</span>
+            </div>
+            <p class="small">George D. - 4/5<br>It was ok.</p>
+          </div>
+        </article>
+
+        <article class="game-card card">
+          <img src="images/2k26.jpg" alt="NBA 2K26" class="cover">
+          <div class="game-meta">
+            <h3>NBA 2K26 (PS5)</h3>
+            <div class="rating">Overall Rating:
+              <span class="stars">★★★★☆</span>
+            </div>
+            <p class="small">Brittney S. - 4/5<br>Been playing this for years and still can't get enough!</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Forum Box -->
+      <section class="forum" aria-label="Playstation Forum">
+        <h2 class="forum-title">Playstation Forum</h2>
+
+        <form class="forum-form" onsubmit="postForum(event)">
+          <textarea id="forum-text" placeholder="Type Response Here"></textarea>
+          <div class="forum-controls">
+            <button type="submit" class="btn-post">Post</button>
+          </div>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="byline">By: William and Kai</div>
+          <div class="nav-arrows">
+            <a href="index.html" class="arrow prev" title="Previous">&#9650;</a>
+            <a href="pc.html" class="arrow next" title="Next">&#9654;</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    // Small search helper (simple redirect based on keywords)
+    function doSearch(){
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      if (!q) return false;
+      // basic mapping; expand as you add pages
+      if (q.includes('pc')) location.href = 'pc.html';
+      else if (q.includes('xbox')) location.href = 'xbox.html';
+      else if (q.includes('play')) location.href = 'playstation.html';
+      else if (q.includes('vr')) location.href = 'vr.html';
+      else if (q.includes('nintendo')) location.href = 'nintendo.html';
+      else {
+        // fallback to google site search
+        window.location = 'https://www.google.com/search?q=site:wsraiford.github.io/ITEC362Project ' + encodeURIComponent(q);
+      }
+      return false; // prevent default form submission
+    }
+
+    // Demo "post" action for forum: just shows an alert and clears textarea.
+    function postForum(e){
+      e.preventDefault();
+      const t = document.getElementById('forum-text');
+      if (!t.value.trim()) { alert('Type a response before posting.'); return; }
+      // in a real site you'd POST to a server or append the post
+      alert('Posted: ' + t.value.trim());
+      t.value = '';
+    }
+  </script>
+
+</body>
+</html>
