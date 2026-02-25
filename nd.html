@@ -38,9 +38,17 @@
 <div><img src="https://media.gamestop.com/i/gamestop/10162390/Luigis-Mansion-3" alt="Luigi's Mansion 3" "></div> 
 <textarea name="reviews" rows="10" cols="30" placeholder="Type review here.." ></textarea>
 <div><img src="https://www.sidequesting.com/wp-content/uploads/Switch_NintendoSwitchSports_artwork_16.jpg" alt="Nintendo Switch Sports" > </div>
-<textarea name="reviews" rows="10" cols="30" placeholder="Type review here.."></textarea>
+<textarea name="reviews" rows="10" cols="30" placeholder="Type review here.."></textarea> 
+ <section class="forum" aria-label="Nintnedo Forum">
+        <h2 class="forum-title">Nintendo Forum</h2>
 
-<footer><a href="pc.html">PC Page</a></footer> 
+        <form class="forum-form" onsubmit="postForum(event)">
+          <textarea id="forum-text" placeholder="Type Response Here"></textarea>
+          <div class="forum-controls">
+            <button type="submit" class="btn-post">Post</button>
+          </div>
+        </form>
+      </section>
 
 <footer> &copy;www.GAMESRATINGS.com</footer>
 </body>
