@@ -44,12 +44,16 @@ textarea {
 }
 
 /* Reset / base */
-*{box-sizing:border-box}
-html,body{ height:100%; margin:0; font-family: "Orbitron", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg); color:#111; }
-a{ color:inherit; text-decoration:none; }
-img{max-width:100%; display:block;}
-.visually-hidden{
-  position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Orbitron", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+
+  background-image: url("https://img.freepik.com/free-vector/realistic-hexagonal-background_79603-1646.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;        /* makes it fill the screen */
+  background-repeat: no-repeat;  /* prevents repeating */
+  background-attachment: fixed;  /* keeps it still when scrolling */
+  background-position: center;   /* centers image */
 }
 
 /* ---------------- Header / Nav ---------------- */
