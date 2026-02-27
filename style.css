@@ -237,8 +237,8 @@ img{max-width:100%; display:block;}
 
 /* ---------------- Home page helpers ---------------- */
 .hero {
-  background: #000;   /* black background */
-  color: #fff;        /* white text */
+  background: #fff;   /* white background */
+  color: #000;        /* black text */
   padding: 40px;
   border-radius: 6px;
   margin-bottom: 18px;
