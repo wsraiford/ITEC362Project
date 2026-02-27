@@ -1,54 +1,48 @@
 *made by william*
 
-
-<a href="playstation.html">View PlayStation →</a>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GameRatings - PlayStation</title>
-
-  <!-- Google font used in screenshot-like style (optional) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="site-play">
-
   <!-- Header / Navbar -->
   <header class="site-header">
-  <div class="header-inner">
-    <div class="logo-text">GameRatings.com</div>
+    <div class="header-inner">
+      <div class="logo-text">GameRatings.com</div>
+      <nav class="platform-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="playstation.html" class="active">PlayStation</a></li>
+          <li><a href="pc.html">PC</a></li>
+          <li><a href="xbox.html">XBOX</a></li>
+          <li><a href="nintendo.html">Nintendo</a></li>
+        </ul>
+      </nav>
 
-    <nav class="platform-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="playstation.html" class="active">PlayStation</a></li>
-        <li><a href="pc.html">PC</a></li>
-        <li><a href="xbox.html">XBOX</a></li>
-        <li><a href="nintendo.html">Nintendo</a></li>
-        
-      </ul>
-    </nav>
-
-    <div class="search">
-      <input type="search" placeholder="Search">
+      <div class="search">
+        <!-- added id so doSearch() can use this element -->
+        <input type="search" id="searchInput" placeholder="Search">
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main class="main">
     <div class="container">
-
       <h1 class="page-title">Featured PlayStation Games</h1>
 
       <!-- GRID OF GAME CARDS -->
       <section class="grid grid-3">
-        <!-- Game card (repeat for each game) -->
+        <!-- 1) Split Fiction -->
         <article class="game-card card">
-          <img src="images/split-fiction.jpg" alt="Split Fiction" class="cover">
+          <!-- I couldn't find a file named split-fiction.jpg in your screenshot.
+               Replace 'PLACEHOLDER_SPLIT.jpg' with the actual filename from your images folder if different. -->
+          <img src="images/PLACEHOLDER_SPLIT.jpg" alt="Split Fiction" class="cover">
           <div class="game-meta">
             <h3>Split Fiction (PS5)</h3>
             <div class="rating">Overall Rating:
@@ -58,8 +52,11 @@
           </div>
         </article>
 
+        <!-- 2) The Last of Us -->
         <article class="game-card card">
-          <img src="images/last-of-us.jpg" alt="The Last of Us" class="cover">
+          <!-- I couldn't find an exact 'last-of-us.jpg' in screenshot. If you have it, change this to that filename.
+               I left a placeholder below. -->
+          <img src="images/PLACEHOLDER_LASTOFUS.jpg" alt="The Last of Us" class="cover">
           <div class="game-meta">
             <h3>The Last of Us (PS4)</h3>
             <div class="rating">Overall Rating:
@@ -69,8 +66,10 @@
           </div>
         </article>
 
+        <!-- 3) Evil West -->
         <article class="game-card card">
-          <img src="images/evil-west.jpg" alt="Evil West" class="cover">
+          <!-- screenshot shows: evilwest.jpg -->
+          <img src="images/evilwest.jpg" alt="Evil West" class="cover">
           <div class="game-meta">
             <h3>Evil West (PS5)</h3>
             <div class="rating">Overall Rating:
@@ -80,8 +79,10 @@
           </div>
         </article>
 
+        <!-- 4) Capcom Fighting -->
         <article class="game-card card">
-          <img src="images/capcom-collection.jpg" alt="Capcom Fighting" class="cover">
+          <!-- screenshot shows: capcom.jpg -->
+          <img src="images/capcom.jpg" alt="Capcom Fighting" class="cover">
           <div class="game-meta">
             <h3>Capcom Fighting (PS4)</h3>
             <div class="rating">Overall Rating:
@@ -91,8 +92,10 @@
           </div>
         </article>
 
+        <!-- 5) Marvel Spider-Man 2 -->
         <article class="game-card card">
-          <img src="images/spiderman2.jpg" alt="Spider-man 2" class="cover">
+          <!-- screenshot shows: marvel.jpg — using that as a best guess for your Spider-man cover -->
+          <img src="images/marvel.jpg" alt="Spider-man 2" class="cover">
           <div class="game-meta">
             <h3>Marvel Spider-Man 2 (PS5)</h3>
             <div class="rating">Overall Rating:
@@ -102,7 +105,9 @@
           </div>
         </article>
 
+        <!-- 6) NBA 2K26 -->
         <article class="game-card card">
+          <!-- screenshot shows: 2k26.jpg -->
           <img src="images/2k26.jpg" alt="NBA 2K26" class="cover">
           <div class="game-meta">
             <h3>NBA 2K26 (PS5)</h3>
@@ -128,7 +133,6 @@
 
       <footer class="site-footer">
         <div class="footer-inner">
-          
           <div class="nav-arrows">
             <a href="index.html" class="arrow prev" title="Previous">&#9650;</a>
             <a href="pc.html" class="arrow next" title="Next">&#9654;</a>
@@ -140,33 +144,26 @@
   </main>
 
   <script>
-    // Small search helper (simple redirect based on keywords)
     function doSearch(){
       const q = document.getElementById('searchInput').value.trim().toLowerCase();
       if (!q) return false;
-      // basic mapping; expand as you add pages
       if (q.includes('pc')) location.href = 'pc.html';
       else if (q.includes('xbox')) location.href = 'xbox.html';
       else if (q.includes('play')) location.href = 'playstation.html';
-    
       else if (q.includes('nintendo')) location.href = 'nintendo.html';
       else {
-        // fallback to google site search
         window.location = 'https://www.google.com/search?q=site:wsraiford.github.io/ITEC362Project ' + encodeURIComponent(q);
       }
-      return false; // prevent default form submission
+      return false;
     }
 
-    // Demo "post" action for forum: just shows an alert and clears textarea.
     function postForum(e){
       e.preventDefault();
       const t = document.getElementById('forum-text');
       if (!t.value.trim()) { alert('Type a response before posting.'); return; }
-      // in a real site you'd POST to a server or append the post
       alert('Posted: ' + t.value.trim());
       t.value = '';
     }
   </script>
-
 </body>
 </html>
