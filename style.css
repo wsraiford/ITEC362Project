@@ -276,3 +276,9 @@ img{max-width:100%; display:block;}
 
 /* small print fixes (avoid overflow) */
 pre, code { white-space: pre-wrap; word-break: break-word; }
+
+
+
+.hero h1 {
+  color: #000;
+}
