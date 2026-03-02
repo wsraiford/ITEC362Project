@@ -10,6 +10,11 @@ h1 {
     text-align: center;
 }
 
+div  img{
+    width: 330px;
+    height: 520px;
+}
+
 body {
     background-color: lightblue;
 }
