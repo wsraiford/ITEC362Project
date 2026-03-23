@@ -5,41 +5,91 @@
 <!doctype html>
 <html lang="en">
 <head>
-<style>
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; padding: 0; }
-
-  .site-header { margin-top: 0; }
-</style>
-  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GameRatings - XBOX</title>
-
-
   <link rel="stylesheet" href="style.css">
 
- 
   <style>
+    /* --- MOBILE BASE STYLES (Default) --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; line-height: 1.5; background-color: #f4f4f4; }
+
+    .container { width: 92%; margin: 0 auto; }
+
+    /* Stack header elements vertically on mobile */
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      background: #222;
+      color: white;
+    }
+
+    .platform-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .platform-nav a { color: white; text-decoration: none; font-size: 14px; }
+    .platform-nav a.active { color: #0fbf6b; font-weight: bold; }
+
+    /* Games Grid: 1 Column on Mobile */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr; 
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .game-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .game-cover { width: 100%; height: auto; display: block; }
+    .meta { padding: 15px; }
     .xbox-badge {
-      display:inline-block;
-      padding:6px 8px;
-      border-radius:4px;
-      background:#0fbf6b;
-      color:white;
-      font-weight:700;
-      font-size:12px;
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: #0fbf6b;
+      color: white;
+      font-size: 12px;
+    }
+
+    /* --- DESKTOP LAYOUT (Wider than 768px) --- */
+    @media (min-width: 768px) {
+      .container { max-width: 1100px; }
+
+      /* Horizontal header for desktop */
+      .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+      }
+
+      /* 3 Columns on Desktop */
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .platform-nav ul { gap: 20px; }
     }
   </style>
 </head>
 
 <body>
-
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo-text">GameRatings.com</div>
-
+    <div class="logo-text"><strong>GameRatings.com</strong></div>
     <nav class="platform-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -47,102 +97,63 @@
         <li><a href="pc.html">PC</a></li>
         <li><a href="xbox.html" class="active">XBOX</a></li>
         <li><a href="nintendo.html">Nintendo</a></li>
-     
       </ul>
     </nav>
-
     <div class="search">
-      <input type="search" placeholder="Search">
+      <input type="search" placeholder="Search...">
     </div>
   </div>
 </header>
 
 <main class="main">
   <div class="container">
-
     <section>
-      <h2 class="section-title">
-        Trending XBOX Games
-        <span class="xbox-badge">XBOX</span>
+      <h2 style="margin-top:20px;">
+        Trending XBOX Games <span class="xbox-badge">XBOX</span>
       </h2>
 
       <div class="grid grid-3">
-
         <article class="game-card">
-          <img src="images/forza.jpg" alt="Forza Horizon 5" class="game-cover">
+          <img src="images/forza.jpg" alt="Forza" class="game-cover">
           <div class="meta">
             <h4>Forza Horizon 5</h4>
-            <p class="small text-muted">Overall Rating: ★★★★★ — Taylor — 5/5</p>
-            <p class="small">Beautiful open-world racing with tons of cars.</p>
+            <p class="small text-muted">★★★★★ — 5/5</p>
+            <p>Beautiful open-world racing.</p>
           </div>
         </article>
 
         <article class="game-card">
-          <img src="images/halo.jpg" alt="Halo Infinite" class="game-cover">
+          <img src="images/halo.jpg" alt="Halo" class="game-cover">
           <div class="meta">
             <h4>Halo Infinite</h4>
-            <p class="small text-muted">Overall Rating: ★★★★☆ — Raymond — 4/5</p>
-            <p class="small">Strong multiplayer and a solid campaign.</p>
+            <p class="small text-muted">★★★★☆ — 4/5</p>
+            <p>Solid multiplayer and campaign.</p>
           </div>
         </article>
 
         <article class="game-card">
-          <img src="images/gta.jpg" alt="GTA V" class="game-cover">
+          <img src="images/gta.jpg" alt="GTA" class="game-cover">
           <div class="meta">
             <h4>GTA V</h4>
-            <p class="small text-muted">Overall Rating: ★★★★★ — Marcus — 5/5</p>
-            <p class="small">Classic open-world experience that never gets old.</p>
+            <p class="small text-muted">★★★★★ — 5/5</p>
+            <p>Classic open-world experience.</p>
           </div>
         </article>
-
-        <article class="game-card">
-          <img src="images/fortnite.jpg" alt="Fortnite" class="game-cover">
-          <div class="meta">
-            <h4>Fortnite</h4>
-            <p class="small text-muted">Overall Rating: ★★★★☆ — Emily — 4/5</p>
-            <p class="small">Fun seasonal updates and competitive matches.</p>
-          </div>
-        </article>
-
-        <article class="game-card">
-          <img src="images/overcooked.jpg" alt="Overcooked" class="game-cover">
-          <div class="meta">
-            <h4>Overcooked</h4>
-            <p class="small text-muted">Overall Rating: ★★★☆☆ — Taylor — 3/5</p>
-            <p class="small">Chaotic couch co-op fun.</p>
-          </div>
-        </article>
-
-        <article class="game-card">
-          <img src="images/minecraft.jpg" alt="Minecraft" class="game-cover">
-          <div class="meta">
-            <h4>Minecraft</h4>
-            <p class="small text-muted">Overall Rating: ★★★★★ — Connor — 5/5</p>
-            <p class="small">Creative freedom at its best.</p>
-          </div>
-        </article>
-
-      </div>
+        </div>
     </section>
 
-    <!-- Forum -->
-    <section class="pc-forum">
-      <h2 class="section-title">XBOX Forum</h2>
-
-      <form class="forum-form">
-        <textarea placeholder="Type Response Here"></textarea>
-        <div class="forum-controls">
-          <button type="submit" class="btn-post">Post</button>
-        </div>
+    <section style="margin: 40px 0;">
+      <h2>XBOX Forum</h2>
+      <form style="display: flex; flex-direction: column; gap: 10px;">
+        <textarea placeholder="Type Response Here" style="width: 100%; height: 100px; padding: 10px;"></textarea>
+        <button type="submit" style="background: #0fbf6b; color: white; padding: 10px; border: none; cursor: pointer; width: 100px;">Post</button>
       </form>
     </section>
 
-    <footer class="site-footer">
+    <footer style="text-align: center; padding: 20px; color: #666; font-size: 12px;">
       © 2026 GameRatings.com — ITEC 362 Web Systems Project
     </footer>
-
   </div>
 </main>
-
 </body>
 </html>
