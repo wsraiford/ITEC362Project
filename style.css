@@ -64,57 +64,56 @@ html, body {
   background-position: center;   /* centers image */
 }
 
-/* ---------------- Header / Nav ---------------- */
-.site-header{
-  background:#111;
-  color:#fff;
-  padding:12px 0;
-  border-bottom: 6px solid #0b0b0b;
-}
-.header-inner{
-  max-width:var(--max-width);
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  gap:18px;
-  padding:0 var(--content-padding);
+/* --- HEADER & NAVIGATION --- */
+.site-header { 
+    background: #1a1a1a; /* Deep dark background */
+    color: white; 
+    padding: 1rem 0; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-/* Logo */
-.logo-text, .brand .logo{
-  font-weight:800;
-  color:#fff;
-}
-.brand .logo{ width:84px; height:84px; object-fit:contain; }
-
-/* Platform nav */
-.platform-nav{ margin-left: 8px; }
-.platform-nav ul{ display:flex; gap:14px; list-style:none; padding:0; margin:0; align-items:center; }
-.platform-nav li{ list-style:none; }
-.platform-nav a{
-  display:block;
-  padding:6px 10px;
-  border-radius:6px;
-  font-weight:700;
-  font-size:13px;
-  color:#ddd;
-}
-.platform-nav .active a{
-  background:#111;
-  color:#fff;
-  border: 2px solid #111;
-  box-shadow: 0 0 0 3px rgba(173,216,230,0.06) inset;
+.header-inner { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1.2rem; 
 }
 
-/* Search area (right side) */
-.search{ margin-left:auto; }
-.search input[type="search"]{
-  width:260px;
-  padding:10px 14px;
-  border-radius:12px;
-  border:1px solid #eee;
-  background:#f6f0f7;
-  font-size:14px;
+.logo-text { 
+    font-size: 1.5rem; 
+    color: #ffffff; /* Forced white for the logo */
+    text-decoration: none;
+}
+
+.platform-nav ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    list-style: none; 
+    gap: 5px; 
+}
+
+.platform-nav a { 
+    color: #e0e0e0; /* Light grey/white text */
+    text-decoration: none; 
+    font-size: 0.95rem; 
+    padding: 10px 15px; 
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Hover state for better UX */
+.platform-nav a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* The active page remains highlighted in green */
+.platform-nav a.active { 
+    background: #0fbf6b; 
+    color: white; 
+    font-weight: bold;
 }
 
 
