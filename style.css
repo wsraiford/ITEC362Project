@@ -64,58 +64,57 @@ html, body {
   background-position: center;   /* centers image */
 }
 
-/* --- HEADER & NAVIGATION --- */
+/* --- UNIVERSAL HEADER & NAV (MOBILE FRIENDLY) --- */
 .site-header { 
-    background: #1a1a1a; /* Deep dark background */
-    color: white; 
-    padding: 1rem 0; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background: #1a1a1a !important; 
+    padding: 1rem 0 !important; 
+    width: 100% !important;
 }
 
 .header-inner { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 1.2rem; 
-}
-
-.logo-text { 
-    font-size: 1.5rem; 
-    color: #ffffff; /* Forced white for the logo */
-    text-decoration: none;
+    display: flex !important; 
+    flex-direction: column !important; /* Stacked for mobile */
+    align-items: center !important; 
+    gap: 15px !important; 
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .platform-nav ul { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    list-style: none; 
-    gap: 5px; 
+    display: flex !important; 
+    flex-wrap: wrap !important; 
+    justify-content: center !important; 
+    list-style: none !important; 
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 8px !important; 
 }
 
 .platform-nav a { 
-    color: #e0e0e0; /* Light grey/white text */
-    text-decoration: none; 
-    font-size: 0.95rem; 
-    padding: 10px 15px; 
-    display: inline-block;
-    transition: all 0.3s ease;
+    color: #ffffff !important; 
+    text-decoration: none !important; 
+    font-size: 0.9rem !important; 
+    padding: 12px 15px !important; /* Touch-friendly size */
+    display: block !important;
     border-radius: 4px;
+    transition: 0.2s;
 }
 
-/* Hover state for better UX */
-.platform-nav a:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* The active page remains highlighted in green */
+/* Page Highlight */
 .platform-nav a.active { 
-    background: #0fbf6b; 
-    color: white; 
-    font-weight: bold;
+    background: #0fbf6b !important; 
+    color: white !important; 
+    font-weight: bold !important;
 }
 
+/* Desktop Switch: Side-by-side layout */
+@media (min-width: 1024px) {
+    .header-inner { 
+        flex-direction: row !important; 
+        justify-content: space-between !important; 
+        padding: 0 20px !important; 
+    }
+}
 
 /* ---------------- Main container ---------------- */
 /* shared container used by index/xbox/pc pages */
