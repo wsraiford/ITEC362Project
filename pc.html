@@ -10,7 +10,7 @@
         <nav>       
     <link rel="stylesheet" href="style.css"></link>
     <li><a href="index.html">Home</a></li>
-    <li> <a href="nd.html">Nintendo Switch</a></li>
+    <li> <a href="new-nd.html">Nintendo Switch</a></li>
     <li><a href="pc.html">PC Page</a></li> 
     <li><a href="xbox.html">Xbox</a></li>
     <li><a href="playstation.html">Playstation</a></li> <!--NAV BAR- Add logo/* /* ADD Search BAR--> 
@@ -51,9 +51,37 @@
           <textarea id="forum-text" placeholder="Type Response Here"></textarea>
           <div class="forum-controls">
             <button type="submit" class="btn-post">Post</button>
-          </div>
-        </form>
+          </div> 
+        </form> 
+            <div id="forum-posts"></div>
       </section> 
+         <script>
+  const form = document.querySelector(".forum-form");
+  const textarea = form.querySelector("textarea");
+  const postsContainer = document.getElementById("forum-posts");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page refresh
+
+    const text = textarea.value.trim();
+
+    if (text === "") return;
+
+    // create post element
+    const post = document.createElement("div");
+    post.classList.add("card");
+    post.style.marginTop = "10px";
+    post.style.padding = "10px";
+    post.innerText = text;
+
+    // add to page
+    postsContainer.prepend(post);
+
+    // clear input
+    textarea.value = "";
+  });
+</script>
+
     </body>   
     <footer><a href="nd.html">Nintendo Switch Page</a></footer>
        <footer> &copy;www.GAMESRATINGS.com</footer> 
