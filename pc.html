@@ -6,24 +6,26 @@
         <title>PC-Webpage</title> 
     </head>
    
-    <header>        
+    <header>       
     <link rel="stylesheet" href="style.css"></link>
-        <nav> 
-      <ul>      
-    <li><a href="index.html">Home</a></li>
-    <li> <a href="new-nd.html">Nintendo Switch</a></li>
-    <li><a href="pc.html">PC Page</a></li> 
-    <li><a href="xbox.html">Xbox</a></li>
-    <li><a href="playstation.html">Playstation</a></li> 
-      </ul> 
+        <nav class="active"> 
+          <ul>      
+            <li><a href="index.html">Home</a></li>
+            <li> <a href="new-nd.html">Nintendo Switch</a></li>
+            <li><a href="pc.html">PC Page</a></li> 
+            <li><a href="xbox.html">Xbox</a></li>
+            <li><a href="playstation.html">Playstation</a></li> 
+          </ul> 
         </nav>
          <div class="search">   
              <input type="search" id="searchInput" placeholder="Search"> 
          </div>    
     </header>  
+
     <body>       
-        <div><h1 class="site-header h1">Best PC Games</h1></div> 
-   <article class="game-list">    
+            <div><h1 class="site-header h1">Best PC Games</h1></div> 
+        <main class="game-list">
+        <article class="game-list">    
     <div><img class="game-cover-small" src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_image1600w.jpg">
     <textarea name="reviews" rows="10" cols="30" placeholder="Type Review here.."></textarea>
     </div> </article> 
@@ -123,7 +125,7 @@
     postsContainer.prepend(post);
   }
 </script>
-
+        </main>
     </body>   
     <footer><a href="nd.html">Nintendo Switch Page</a></footer>
        <footer> &copy;www.GAMESRATINGS.com</footer> 
