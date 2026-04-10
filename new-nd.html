@@ -108,33 +108,38 @@
 </article> 
 
 </main>
-  <script>
+<script>
   const form = document.querySelector(".forum-form");
   const textarea = form.querySelector("textarea");
   const postsContainer = document.getElementById("forum-posts");
 
+  // Load saved posts
+  const savedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+  savedPosts.forEach(addPostToPage);
+
   form.addEventListener("submit", function(e) {
-    e.preventDefault(); // stop page refresh
+    e.preventDefault();
 
     const text = textarea.value.trim();
-
     if (text === "") return;
 
-    // create post element
+    savedPosts.unshift(text);
+    localStorage.setItem("posts", JSON.stringify(savedPosts));
+
+    addPostToPage(text);
+    textarea.value = "";
+  });
+
+  function addPostToPage(text) {
     const post = document.createElement("div");
     post.classList.add("card");
     post.style.marginTop = "10px";
     post.style.padding = "10px";
     post.innerText = text;
 
-    // add to page
     postsContainer.prepend(post);
-
-    // clear input
-    textarea.value = "";
-  });
+  }
 </script>
-
 </body>  
 <--!Forum--> 
   <section class="new-nd-forum" style="margin-top:30px;">
