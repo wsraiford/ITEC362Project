@@ -128,16 +128,12 @@
       </section>
 
       <!-- Forum Box -->
-      <section class="forum" aria-label="Playstation Forum">
-        <h2 class="forum-title">Playstation Forum</h2>
-
-        <form class="forum-form" onsubmit="postForum(event)">
-          <textarea id="forum-text" placeholder="Type Response Here"></textarea>
-          <div class="forum-controls">
-            <button type="submit" class="btn-post">Post</button>
-          </div>
-        </form>
-      </section>
+    <form id="forumForm">
+    <textarea id="postInput" placeholder="Start a discussion..."></textarea>
+    <button type="submit">Post</button>
+    <div id="formFeedback" style="margin-top: 10px; font-weight: bold;"></div>
+</form>
+<div id="forum-posts"></div>
 
       <footer class="site-footer">
         <div class="footer-inner">
@@ -169,5 +165,6 @@
       t.value = '';
     }
   </script>
+ <script src="script.js"></script>
 </body>
 </html>
