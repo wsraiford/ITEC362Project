@@ -152,50 +152,22 @@
     </section>
 
     <!-- Forum -->
-    <section class="pc-forum" style="margin-top:30px;">
-      <h2 class="section-title">Community Forum</h2>
-
-      <form class="forum-form">
-        <textarea placeholder="Start a discussion..."></textarea>
-        <div class="forum-controls">
-          <button type="submit" class="btn-post">Post</button>
-        </div> 
+    <section id="forum" style="margin-top: 30px;">
+        <h2 class="section-title">Community Forum</h2>
+        <form id="forumForm" class="forum-form">
+            <textarea id="postInput" placeholder="Start a discussion..." required></textarea>
+            <div class="forum-controls">
+                <button type="submit" id="postBtn" class="btn-post">Post</button>
+            </div>
+            <div id="formFeedback" style="margin-top: 10px; font-weight: bold;"></div>
+        </form>
         <div id="forum-posts"></div>
-      </form>
     </section>
 
-    <footer class="site-footer" style="margin-top:25px;">
-      © 2026 GameRatings.com — ITEC 362 Web Systems Project
+    <footer class="site-footer" style="margin-top: 25px;">
+        © 2026 GameRatings.com — ITEC 362 Web Systems Project
     </footer>
 
-  </div>
-</main>
-<script>
-  const form = document.querySelector(".forum-form");
-  const textarea = form.querySelector("textarea");
-  const postsContainer = document.getElementById("forum-posts");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // stop page refresh
-
-    const text = textarea.value.trim();
-
-    if (text === "") return;
-
-    // create post element
-    const post = document.createElement("div");
-    post.classList.add("card");
-    post.style.marginTop = "10px";
-    post.style.padding = "10px";
-    post.innerText = text;
-
-    // add to page
-    postsContainer.prepend(post);
-
-    // clear input
-    textarea.value = "";
-  });
-</script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
