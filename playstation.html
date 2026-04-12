@@ -128,43 +128,34 @@
       </section>
 
       <!-- Forum Box -->
-    <form id="forumForm">
-    <textarea id="postInput" placeholder="Start a discussion..."></textarea>
-    <button type="submit">Post</button>
-    <div id="formFeedback" style="margin-top: 10px; font-weight: bold;"></div>
-</form>
-<div id="forum-posts"></div>
+   <section class="pc-forum" style="margin-top: 30px;">
+        <h2 class="section-title">PlayStation Forum</h2>
+        <form id="forumForm" class="forum-form">
+            <textarea id="postInput" placeholder="Start a discussion..." required></textarea>
+            <div class="forum-controls">
+                <button type="submit" id="postBtn" class="btn-post">Post</button>
+            </div>
+            <div id="formFeedback" style="margin-top: 10px; font-weight: bold;"></div>
+        </form>
+        <div id="forum-posts"></div>
+    </section>
 
-      <footer class="site-footer">
-        <div class="footer-inner">
-        </div>
-      </footer>
+    <footer class="site-footer" style="margin-top: 25px;">
+        <p>© 2026 GameRatings.com — ITEC 362 Web Systems Project</p>
+    </footer>
 
-    </div>
-  </main>
+    <script>
+        function doSearch() {
+            const q = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!q) return false;
+            if (q.includes('pc')) location.href = 'pc.html';
+            else if (q.includes('xbox')) location.href = 'xbox.html';
+            else if (q.includes('play')) location.href = 'playstation.html';
+            else if (q.includes('nintendo')) location.href = 'new-nd.html';
+            return false;
+        }
+    </script>
 
-  <script>
-    function doSearch(){
-      const q = document.getElementById('searchInput').value.trim().toLowerCase();
-      if (!q) return false;
-      if (q.includes('pc')) location.href = 'pc.html';
-      else if (q.includes('xbox')) location.href = 'xbox.html';
-      else if (q.includes('play')) location.href = 'playstation.html';
-      else if (q.includes('nintendo')) location.href = 'nintendo.html';
-      else {
-        window.location = 'https://www.google.com/search?q=site:wsraiford.github.io/ITEC362Project ' + encodeURIComponent(q);
-      }
-      return false;
-    }
-
-    function postForum(e){
-      e.preventDefault();
-      const t = document.getElementById('forum-text');
-      if (!t.value.trim()) { alert('Type a response before posting.'); return; }
-      alert('Posted: ' + t.value.trim());
-      t.value = '';
-    }
-  </script>
- <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
