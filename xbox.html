@@ -77,21 +77,24 @@
         </article>
 
       </section>
-
-      <section class="forum" aria-label="XBOX Forum">
-        <h2 class="forum-title">XBOX Forum</h2>
-
-        <form class="forum-form" onsubmit="postForum(event)">
-          <textarea id="forum-text" placeholder="Type Response Here"></textarea>
-          <div class="forum-controls">
-            <button type="submit" class="btn-post">Post</button>
-          </div>
+<section id="forum" style="margin-top: 30px;">
+        <h2 class="section-title">Xbox Forum</h2>
+        <form id="forumForm" class="forum-form">
+            <textarea id="postInput" placeholder="Start a discussion..." required></textarea>
+            <div class="forum-controls">
+                <button type="submit" id="postBtn" class="btn-post">Post</button>
+            </div>
+            <div id="formFeedback" style="margin-top: 10px; font-weight: bold;"></div>
         </form>
-      </section>
+        <div id="forum-posts"></div>
+    </section>
 
-      <footer class="site-footer">
+    <footer class="site-footer">
         <div class="footer-inner">
-          <p>© 2026 GameRatings.com</p>
+            <p>© 2026 GameRatings.com — ITEC 362 Web Systems Project</p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
