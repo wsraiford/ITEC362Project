@@ -1,41 +1,74 @@
 <!DOCTYPE html> 
 <html lang="en">   
     <head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" /> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"> 
         <style>
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
      html, body { height: 100%; margin: 0; padding: 0; }
 
         .site-header { margin-top: 0; }
+            <style>
+    .card, .game-card {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover, .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+    }
+
+    .platform-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .announcement {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px;
+      border-radius:8px;
+      background:#f9f9f9;
+      border:1px solid #eee;
+    }
+
+    .announcement .accent {
+      width:6px;
+      height:40px;
+      border-radius:4px;
+    }
 </style>
      <title>Nintendo Switch-Webpage:By Kai Farquharson</title> 
-        <meta charset="UTF-8"/> 
-        <meta name="viewport" content="width=device-width, initial-scale=1"/> 
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css"> 
     </head>
-
 <body> 
     <header class="site-header">
         <div class="header-inner"> 
-        <div class="logo-text">GameRating.com</div>
-    <nav class="platform-nav"> 
-   <ul> 
-        <li><a href="index.html">Home</a></li>
-        <li><a href="playstation.html">PlayStation</a></li>
-        <li><a href="pc.html">PC</a></li>
-        <li><a href="xbox.html">Xbox</a></li>
-        <li><a href="new-nd.html">Nintendo</a></li>
-   </ul>
-</nav> 
-<div class="search">
-<input type="search" id="searchInput" placeholder="Search">
-</div> 
-</header>
+            <div class="logo-text">GameRating.com</div>
+                <nav class="platform-nav"> 
+                   <ul> 
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="playstation.html">PlayStation</a></li>
+                        <li><a href="pc.html">PC</a></li>
+                        <li><a href="xbox.html">Xbox</a></li>
+                        <li><a href="new-nd.html">Nintendo</a></li>
+                   </ul>
+                </nav> 
+    <div class="search">
+        <input type="search" id="searchInput" placeholder="Search">
+        </div> 
+            </div>
+    </header>
 <div> 
     <h1 class="page-title"> Top 10 Nintendo Switch Games</h1> 
 </div>  
-<main class="game-list">
+<main class="game-list"> 
+    <div class="container">
+        
     <article class="game-card card">
         <div class="game-cover"> 
             <img class="game-cover-small" src="https://www.mariowiki.com/images/9/9b/MK8_Deluxe_-_Box_NA.png?23527" alt="MK8_Deluxe_-_Box_NA"></div>
@@ -108,7 +141,7 @@
     <textarea name="reviews" rows="10" cols="30"></textarea> 
     </div>
 </article> 
-
+</div>
 </main>
 <script>
   const form = document.querySelector(".forum-form");
