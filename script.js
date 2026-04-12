@@ -17,7 +17,7 @@ forumForm.addEventListener('submit', function(event) {
         feedback.style.color = "orange";
     } else {
         // 3. Success State
-        feedback.textContent = "Success! Your post has been (simulated) submitted.";
+        feedback.textContent = "Success! Your post has been submitted.";
         feedback.style.color = "green";
         
         // Optional: Clear the box after "submission"
