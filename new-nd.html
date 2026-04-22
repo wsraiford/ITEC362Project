@@ -3,7 +3,7 @@
     <head> 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" /> 
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    
         <link rel="stylesheet" href="style.css"> 
         <style> 
 
@@ -170,7 +170,7 @@
 </main>
 <script>
   const form = document.querySelector(".forum-form");
-  const textarea = form.querySelector("textarea");
+  const textarea = form.querySelector textarea("");
   const postsContainer = document.getElementById("forum-posts");
 
   // Load saved posts
@@ -200,9 +200,8 @@
     postsContainer.prepend(post);
   }
 </script>
-</body>  
-<--!Forum--> 
-  <section class="new-nd-forum" style="margin-top:30px;">
+</body>   
+  <section class="forum-forum" style="margin-top:30px;">
       <h2 class="section-title">Community Forum</h2>
 
       <form class="forum-form">
@@ -213,7 +212,5 @@
       </form>
     </section>
   <div id="forum-posts"></div>
-
 <footer> &copy;www.GAMESRATINGS.com</footer>
-
   </html>
