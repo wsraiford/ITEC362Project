@@ -73,14 +73,14 @@
         
     <article class="game-card card">
         <div class="game-cover"> 
-            <img class="game-cover-small" src="https://www.mariowiki.com/images/9/9b/MK8_Deluxe_-_Box_NA.png?23527" alt="MK8_Deluxe_-_Box_NA">
+            <img class="game-cover-small" src="https://www.mariowiki.com/images/9/9b/MK8_Deluxe_-_Box_NA.png?23527" alt="MK8_Deluxe_-_Box_NA"></div>
             <textarea placeholder="Type review here.." name="reviews" rows="10" cols="30"></textarea> 
         </div>
     </article> 
         <div class="container">
 <article class="game-card card">
     <div class="game-cover"> 
-            <img class="game-cover" src="https://www.maponusgaming.co.uk/wp-content/uploads/2022/04/New_Super_Mario_Bros_U_Deluxe_Switch.jpg" alt="New_Super_Mario_Bros_U_Deluxe_Switch">
+            <img class="game-cover" src="https://www.maponusgaming.co.uk/wp-content/uploads/2022/04/New_Super_Mario_Bros_U_Deluxe_Switch.jpg" alt="New_Super_Mario_Bros_U_Deluxe_Switch"></div>
             <textarea placeholder="Type review here.." name="reviews" rows="10" cols="30"></textarea> 
 </div> 
         </div>
@@ -168,44 +168,12 @@
 </div> 
 </article>
 </main>
-<script>
-  const form = document.querySelector(".forum-form");
-  const textarea = form.querySelector(".community-forum");
-  const postsContainer = document.getElementById("forum-posts");
-
-  // Load saved posts
-  const savedPosts = JSON.parse(localStorage.getItem("posts")) || [];
-  savedPosts.forEach(addPostToPage);
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const text = textarea.value.trim();
-    if (text === "") return;
-
-    savedPosts.unshift(text);
-    localStorage.setItem("posts", JSON.stringify(savedPosts));
-
-    addPostToPage(text);
-    textarea.value = "";
-  });
-
-  function addPostToPage(text) {
-    const post = document.createElement("div");
-    post.classList.add("card");
-    post.style.marginTop = "10px";
-    post.style.padding = "10px";
-    post.innerText = text;
-
-    postsContainer.prepend(post);
-  }
-</script>
 </body>   
   <section class="forum-forum" style="margin-top:30px;">
       <h2 class="section-title">Community Forum</h2>
 
       <form class="forum-form">
-        <textarea class="community-forum" placeholder="Start a discussion..."></textarea>
+        <textarea class="community-forum" placeholder="Start a discussion."></textarea>
         <div class="forum-controls">
           <button type="submit" class="btn-post">Post</button>
         </div>
